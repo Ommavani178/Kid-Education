@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kid Education Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="login-container">
+        <a href="D:\website\my new wbsite\fanadesh-html\Kid Education.html">
+		<img src="hero.png.png" alt="Cartoon Image" class="cartoon-image">
+        </a>
+		<h1 class="title">Kid Education</h1>
+		<div class="login-form">
+			<form action="KidEducation-Copy.html" method="POST">
+				<div class="input-wrapper">
+					Student Name:<input type="text" id="username" name="username" value="" required>
+                    </div>
+                    <div>
+                    Password:<input type="password" id="password" name="password" value="" minlength="8" required>
+				</div>
+				<button type="submit" class="btn">Log In</button>
+                
+                Not Register?<a class="not-register" href="regishtration-page.html">Register here</a>
+			</form>
+			<div class="forgot-password">
+				<a href="#">Forgot password?</a>
+			</div>
+		</div>
+	</div>
+
+	<?php      
+    $host = "localhost";  
+    $user = "root";  
+    $password = '';  
+    $db_name = "javatpoint";  
+      
+    $con = mysqli_connect($host, $user, $password, $db_name);  
+    if(mysqli_connect_errno()) {  
+        die("Failed to connect with MySQL: ". mysqli_connect_error());  
+    }  
+?>  
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartoon Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="login-container">
+        <a href="D:\website\my new wbsite\fanadesh-html\Kid Education.html">
+		    <img src="cartoon-image.png" alt="Cartoon Image" class="cartoon-image">
+        </a>
+		<h1 class="title">Kid Education Registration</h1>
+		<div class="login-form">
+			<form action="#" method="POST">
+				<div class="input-wrapper">
+					Full Name:<input type="text" id="fullname" name="fullname" value="" required>
+                </div>
+				<div class="input-wrapper">
+					Email:<input type="email" id="email" name="email" value="" required>
+                </div>
+                <div class="input-wrapper">
+                    Phone:<input type="tel" id="phone" name="phone" value="" required>
+                </div>
+				<div class="input-wrapper">
+					Password:<input type="password" id="password" name="password" value="" minlength="8" required>
+				</div>
+				<button type="submit" class="btn">Register</button>
+                
+                Already have an account?<a class="not-register" href="login.html">Log in here</a>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

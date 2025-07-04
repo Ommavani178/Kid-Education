@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartoon Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="login-container">
+		    <img src="hero.png.png" alt="Cartoon Image" class="cartoon-image">
+        </a>
+		<h1 class="title">Registration</h1>
+		<div class="login-form">
+			<form action="login-form.html" method="POST">
+				<div class="input-wrapper">
+					Student Name:<input type="text" id="fullname" name="fullname" value="" required>
+                </div>
+				<div class="input-wrapper">
+					Email:<input type="email" id="email" name="email" value="" required>
+                </div>
+                <div class="input-wrapper">
+                    Phone:<input type="tel" id="phone" name="phone" value="" required>
+                </div>
+				<div class="input-wrapper">
+					Password:<input type="password" id="password" name="password" value="" minlength="8" required>
+				</div>
+				<button style="margin-left: 33%;" type="submit">Register</button>
+                
+                <p style="margin-left: 15%;">Already have an account?<a class="not-register" href="login-form.html">Log in here</a></p>
+			</form>
+		</div>
+	</div>
+	
+<!-- php -->
+
+<?php
+$c=mysqli_connect("localhost","root","");
+if($c)
+{
+mysqli_select_db($c, "employee");
+if(isset($_POST["inst"]))
+{
+$e=$_POST["en"];
+$m=$_POST["mb"];
+$ins= "insert into edata values('$e',$m) ";
+if(mysqli_query($c, $ins))
+echo "Record is inserted successfully";
+else
+echo mysqli_error($c);
+
+}
+}
+mysqli_close($c);
+?>
+
+</body>
+</html>
